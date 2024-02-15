@@ -1,0 +1,21 @@
+﻿@page "/pagseguro"
+@model PagSeguroModel
+@{
+    ViewData["Title"] = "PagSeguro";
+}
+
+<div class="text-center">
+    <h1 class="display-4">PagSeguro Config</h1>
+</div>
+
+<form asp-action="Index" method="post">
+    <div class="mb-3">
+        <label for="PagSeguro.ClientId" asp-for="PagSeguro.ClientId" class="form-label">Client ID</label>
+        <input type="text" asp-for="PagSeguro.ClientId" class="form-control" id="PagSeguro.ClientId">
+    </div>
+    <div class="mb-3">
+        <label for="Store.Url" asp-for="PagSeguro.ClientSecret" class="form-label">Client Secret</label>
+        <input type="text" asp-for="PagSeguro.ClientSecret" class="form-control" id="PagSeguro.ClientSecret">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
